@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import main_background from "@/public/images/main-background.webp";
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,7 +51,7 @@ export default function RootLayout({
             quality={100}
             className="z-[-2]"
           />
-          <nav>Navbar here!</nav>
+          <Navbar />
           <div className="h-full w-full bg-fixed bg-slate-900 z-[-1] opacity-30 absolute"></div>
           {/* <Home /> */}
 
