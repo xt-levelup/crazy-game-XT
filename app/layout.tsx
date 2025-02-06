@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
-import main_background from "@/public/images/main-background.webp";
 import Navbar from "@/components/Navbar";
+import MainBackground from "@/components/MainBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -40,24 +39,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${geistSans.variable} ${geistMono.variable} antialiased text-slate-300`}
+        className={`${inter.className} ${geistSans.variable} ${geistMono.variable} antialiased text-slate-600`}
       >
-        <div className="relative h-screen bg-scroll">
-          <Image
-            src={main_background}
-            alt="Main background"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-            className="z-[-2]"
-          />
+        <div className="relative flex flex-col items-center justify-center h-screen bg-fixed">
+          <MainBackground />
           <Navbar />
-          <div className="h-full w-full bg-fixed bg-slate-900 z-[-1] opacity-30 absolute"></div>
-          {/* <Home /> */}
-
+          <div className="h-screen w-full bg-fixed bg-slate-900 z-[-1] opacity-30 absolute"></div>
           {children}
+          <footer>Footer here!</footer>
         </div>
-        <footer>Footer here!</footer>
       </body>
     </html>
   );
