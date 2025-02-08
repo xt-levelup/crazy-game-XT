@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import MainBackground from "@/components/MainBackground";
 
 const geistSans = Geist({
@@ -39,14 +40,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${geistSans.variable} ${geistMono.variable} antialiased text-slate-600`}
+        className={`${inter.className} ${geistSans.variable} ${geistMono.variable} antialiased text-[rgb(210,240,240)]`}
       >
         <div className="relative flex flex-col items-center h-screen bg-fixed">
           <MainBackground />
           <Navbar />
           <div className="h-screen w-full bg-fixed bg-slate-900 z-[-1] opacity-30 absolute"></div>
           {children}
-          <footer>Footer here!</footer>
+          <Footer />
         </div>
       </body>
     </html>
