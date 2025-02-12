@@ -4,15 +4,14 @@ import main_background from "@/public/images/main-background.webp";
 
 export default function MainBackground(): React.ReactElement {
   return (
-    <Image
-      src={main_background}
-      alt="Main background"
-      // layout="fill"
-      fill //NextJs 13
-      // objectFit="cover"
-      style={{ objectFit: "cover" }} //NextJs 13
-      quality={75}
-      className="z-[-2]"
-    />
+    <div className="fixed inset-0 z-[-2]">
+      <Image
+        src={main_background}
+        alt="Main background"
+        fill
+        style={{ objectFit: "cover" }}
+        quality={75}
+      />
+    </div>
   );
 }

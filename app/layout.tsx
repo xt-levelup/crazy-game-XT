@@ -37,10 +37,10 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${geistSans.variable} ${geistMono.variable} antialiased text-[rgb(210,240,240)]`}
       >
-        <div className="relative flex flex-col items-center h-screen bg-fixed">
+        <div className="relative flex flex-col items-center h-screen bg-scroll">
           <MainBackground />
           <Navbar />
-          <div className="h-screen w-full bg-fixed bg-slate-900 z-[-1] opacity-30 absolute"></div>
+          <div className="h-screen w-full fixed bg-fixed bg-slate-900 z-[-1] opacity-30"></div>
           {children}
           <Footer />
         </div>

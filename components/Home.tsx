@@ -3,11 +3,8 @@ import HomeSvg from "@/public/svg/HomeSVG";
 
 export default function Home(): React.ReactElement {
   return (
-    <div
-      className="relative my-[1rem] mx-auto rounded-[12px] shadow-[3px_3px_6px_3px_rgba(255,200,200,0.6)] max-w-[1280px] w-full flex flex-row justify-center items-center"
-      role="main"
-    >
-      <div className="bg-blue-600 absolute w-full h-full z-[-1] rounded-[12px] opacity-60"></div>
+    <div className="div-layout" role="main">
+      <div className="blur-background"></div>
       <div>
         <div className="flex flex-row gap-3 items-center mt-[3rem]">
           <HomeSvg
